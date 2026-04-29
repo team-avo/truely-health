@@ -1,0 +1,63 @@
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  font-family: var(--font-base);
+  font-weight: 700;
+  border-radius: 50px;
+  border: 2px solid transparent;
+  cursor: pointer;
+  transition: all var(--transition);
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 0.01em;
+}
+
+.sm  { padding: 8px 18px;  font-size: 0.825rem; }
+.md  { padding: 12px 28px; font-size: 0.9rem; }
+.lg  { padding: 16px 36px; font-size: 1rem; }
+
+.primary {
+  background: var(--teal-dark);
+  color: var(--white);
+  border-color: var(--teal-dark);
+}
+.primary:hover {
+  background: var(--teal-mid);
+  border-color: var(--teal-mid);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.gold {
+  background: var(--gold);
+  color: var(--white);
+  border-color: var(--gold);
+}
+.gold:hover {
+  background: #b8870e;
+  border-color: #b8870e;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(212,160,23,0.4);
+}
+
+.outline {
+  background: transparent;
+  color: var(--teal-dark);
+  border-color: var(--teal-dark);
+}
+.outline:hover {
+  background: var(--teal-light);
+  transform: translateY(-2px);
+}
+
+.outlineWhite {
+  background: transparent;
+  color: var(--white);
+  border-color: rgba(255,255,255,0.6);
+}
+.outlineWhite:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: var(--white);
+}

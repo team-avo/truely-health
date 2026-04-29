@@ -1,0 +1,246 @@
+.hero {
+  background: linear-gradient(135deg, var(--teal-dark) 0%, #0e7a8d 60%, var(--teal-mid) 100%);
+  padding: calc(var(--nav-h) + 60px) 24px 80px;
+}
+.heroInner {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  animation: fadeInUp 0.6s ease both;
+}
+.heroTitle { color: var(--white); font-size: clamp(2.5rem, 6vw, 4rem); }
+.heroSub { color: rgba(255,255,255,0.8); font-size: 1.1rem; font-weight: 500; margin-top: -8px; }
+.heroBadges { display: flex; gap: 8px; flex-wrap: wrap; }
+.badge {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.85);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 50px;
+}
+.specs {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+.specItem {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: var(--radius-md);
+  padding: 12px 10px;
+  text-align: center;
+}
+.specVal { display: block; font-size: 1.2rem; font-weight: 800; color: var(--gold); }
+.specLabel { display: block; font-size: 0.68rem; color: rgba(255,255,255,0.7); margin-top: 2px; }
+.heroCtas { display: flex; gap: 10px; flex-wrap: wrap; }
+.certRow { display: flex; gap: 8px; flex-wrap: wrap; }
+.certChip {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.2);
+  color: rgba(255,255,255,0.75);
+  font-size: 0.72rem;
+  font-weight: 600;
+  padding: 3px 10px;
+  border-radius: 50px;
+}
+
+.heroVisual {
+  display: flex;
+  justify-content: center;
+  animation: fadeInUp 0.6s 0.2s ease both;
+  animation-fill-mode: both;
+}
+.heroCard {
+  background: var(--white);
+  border-radius: var(--radius-xl);
+  padding: 28px 24px;
+  min-width: 240px;
+  max-width: 280px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-shadow: var(--shadow-lg);
+  animation: float 5s ease-in-out infinite;
+}
+.heroCardTop { font-size: 0.95rem; color: var(--teal-mid); font-weight: 500; }
+.heroCardTop strong { font-weight: 800; }
+.heroCardName { font-size: 1.8rem; font-weight: 800; color: var(--teal-dark); }
+.heroCardDesc { font-size: 0.8rem; color: var(--text-mid); }
+.heroBadgeMid {
+  background: var(--teal-dark); color: var(--white);
+  padding: 5px 12px; border-radius: 50px;
+  font-size: 0.75rem; font-weight: 700; align-self: center;
+}
+.heroHealthRow { font-size: 0.65rem; color: var(--teal-dark); font-weight: 700; }
+.heroFlavRow { font-size: 0.75rem; color: var(--text-mid); }
+.heroEpa { font-size: 0.72rem; color: var(--text-mid); }
+.heroGrams { font-size: 0.9rem; font-weight: 700; color: var(--teal-dark); }
+.heroSoftgels { font-size: 0.68rem; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.06em; }
+
+/* ── FACTS ── */
+.factsInner {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 60px;
+  align-items: start;
+}
+.ingredientNotes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 16px;
+}
+.ingredientNotes li { font-size: 0.9rem; color: var(--text-mid); }
+.allergen {
+  font-size: 0.82rem;
+  color: var(--text-mid);
+  background: var(--gold-light);
+  border: 1px solid rgba(212,160,23,0.2);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+}
+
+/* ── RTG ── */
+.rtgHead { text-align: center; margin-bottom: 40px; }
+.compareTable { overflow-x: auto; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+  min-width: 560px;
+}
+.table th {
+  background: var(--off-white);
+  color: var(--text-dark);
+  padding: 14px 16px;
+  text-align: left;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 2px solid var(--border);
+}
+.thGood { background: var(--teal-light) !important; color: var(--teal-dark) !important; }
+.ours { font-size: 0.65rem; color: var(--gold); font-weight: 700; }
+.table td { padding: 13px 16px; border-bottom: 1px solid var(--border); vertical-align: middle; }
+.featureCell { font-weight: 600; color: var(--text-dark); }
+.goodCell { background: var(--teal-light); color: var(--teal-dark); font-weight: 700; }
+.neutralCell { color: var(--text-mid); }
+
+/* ── BATCH ── */
+.batch { background: var(--off-white); padding: 80px 24px; }
+.batchInner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  text-align: center;
+}
+.batchSteps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  width: 100%;
+}
+.batchStep {
+  background: var(--white);
+  border-radius: var(--radius-lg);
+  padding: 28px 20px;
+  box-shadow: var(--shadow-sm);
+  border: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  text-align: center;
+}
+.stepNum {
+  width: 40px; height: 40px;
+  border-radius: 50%;
+  background: var(--teal-dark);
+  color: var(--white);
+  font-size: 1.1rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.stepTitle { font-size: 0.95rem; font-weight: 700; color: var(--text-dark); }
+.stepDesc { font-size: 0.82rem; color: var(--text-mid); line-height: 1.6; }
+.batchUrl {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  padding: 12px 20px;
+}
+.urlCode { font-size: 0.9rem; color: var(--text-mid); font-family: 'Courier New', monospace; }
+.urlParam { color: var(--gold); font-weight: 700; }
+.lookupRow {
+  display: flex;
+  gap: 0;
+  border-radius: 50px;
+  overflow: hidden;
+  border: 2px solid var(--teal-dark);
+  max-width: 480px;
+  width: 100%;
+}
+.lookupInput {
+  flex: 1;
+  padding: 14px 20px;
+  font-size: 0.95rem;
+  border: none;
+  outline: none;
+  background: var(--white);
+  color: var(--text-dark);
+  font-family: var(--font-base);
+}
+.lookupBtn {
+  padding: 14px 24px;
+  background: var(--teal-dark);
+  color: var(--white);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+  font-family: var(--font-base);
+  transition: background var(--transition);
+}
+.lookupBtn:hover { background: var(--teal-mid); }
+.demoBatches { display: flex; gap: 10px; flex-wrap: wrap; justify-content: center; }
+.demoBtn {
+  padding: 6px 16px;
+  background: var(--teal-light);
+  color: var(--teal-dark);
+  border: 1px solid rgba(11,94,110,0.2);
+  border-radius: 50px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: var(--font-base);
+  transition: all var(--transition);
+}
+.demoBtn:hover { background: var(--teal-dark); color: var(--white); }
+
+@media (max-width: 1024px) {
+  .heroInner { grid-template-columns: 1fr; }
+  .heroVisual { display: none; }
+  .specs { grid-template-columns: repeat(2, 1fr); }
+  .factsInner { grid-template-columns: 1fr; }
+  .batchSteps { grid-template-columns: 1fr; max-width: 400px; }
+}
+@media (max-width: 640px) {
+  .specs { grid-template-columns: repeat(2, 1fr); }
+  .heroCtas { flex-direction: column; max-width: 300px; }
+  .lookupRow { flex-direction: column; border-radius: var(--radius-md); }
+}
